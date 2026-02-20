@@ -1,34 +1,7 @@
 import { Card } from '@/components/ui/card'
 import { ExternalLink, Folder } from 'lucide-react'
-
-const projects = [
-	{
-		name: 'NeuroAcademy',
-		url: 'neuroacademy.uz',
-		description:
-			'Educational platform with modern learning management features',
-		tags: ['React', 'REST API', 'UI/UX'],
-	},
-	{
-		name: 'Mercury Consulting',
-		url: 'mercuryconsulting.uz',
-		description:
-			'Corporate website for consulting services with dynamic content',
-		tags: ['React', 'Vite', 'Responsive'],
-	},
-	{
-		name: 'Qayiq',
-		url: 'qayiq.uz',
-		description: 'Main platform with comprehensive user interface',
-		tags: ['React', 'JavaScript', 'API'],
-	},
-	{
-		name: 'Qayiq Control',
-		url: 'control.qayiq.uz',
-		description: 'Admin dashboard for platform management and analytics',
-		tags: ['React', 'Dashboard', 'Admin'],
-	},
-]
+import Image from 'next/image'
+import { projects } from '@/data/projects'
 
 export function ProjectsSection() {
 	return (
@@ -49,7 +22,13 @@ export function ProjectsSection() {
 						>
 							<div className='space-y-4'>
 								<div className='flex items-start justify-between'>
-									<Folder className='w-10 h-10 text-secondary' />
+									<Image
+										src={project.logo}
+										alt={`${project.name} logo`}
+										width={40}
+										height={40}
+										className='w-10 h-10 rounded-md object-contain'
+									/>
 									<a
 										href={`https://${project.url}`}
 										target='_blank'
