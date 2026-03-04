@@ -31,7 +31,7 @@ export const projects = [
 	},
 	{
 		name: 'TalabaHub',
-		url: 'talaba-hub.vercel.app',
+		url: 'talabahub.uz',
 		logo: '/logos/talabahub.png',
 		description:
 			'Student discount platform for daily usage, helping students find and access exclusive deals',
